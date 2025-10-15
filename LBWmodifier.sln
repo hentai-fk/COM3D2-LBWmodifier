@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project", "Project\Project.csproj", "{89692BB5-0754-4CFA-B58E-221A916E325D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Modifier D3V|Any CPU = Modifier D3V|Any CPU
+		Modifier D4V|Any CPU = Modifier D4V|Any CPU
+		Translator D3V|Any CPU = Translator D3V|Any CPU
+		Translator D4V|Any CPU = Translator D4V|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89692BB5-0754-4CFA-B58E-221A916E325D}.Modifier D3V|Any CPU.ActiveCfg = Modifier D3V|Any CPU
+		{89692BB5-0754-4CFA-B58E-221A916E325D}.Modifier D3V|Any CPU.Build.0 = Modifier D3V|Any CPU
+		{89692BB5-0754-4CFA-B58E-221A916E325D}.Modifier D4V|Any CPU.ActiveCfg = Modifier D4V|Any CPU
+		{89692BB5-0754-4CFA-B58E-221A916E325D}.Modifier D4V|Any CPU.Build.0 = Modifier D4V|Any CPU
+		{89692BB5-0754-4CFA-B58E-221A916E325D}.Translator D3V|Any CPU.ActiveCfg = Translator D3V|Any CPU
+		{89692BB5-0754-4CFA-B58E-221A916E325D}.Translator D3V|Any CPU.Build.0 = Translator D3V|Any CPU
+		{89692BB5-0754-4CFA-B58E-221A916E325D}.Translator D4V|Any CPU.ActiveCfg = Translator D4V|Any CPU
+		{89692BB5-0754-4CFA-B58E-221A916E325D}.Translator D4V|Any CPU.Build.0 = Translator D4V|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BDD44AD-1389-4399-8ACF-273148D3C544}
+	EndGlobalSection
+EndGlobal

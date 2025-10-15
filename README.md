@@ -1,0 +1,2 @@
+# COM3D2-LBWmodifier
+COM3D2(CUSTOM ORDER MAID 3D2)游戏的扩展翻译插件
