@@ -149,7 +149,11 @@ namespace LBWmodifier
                 {
                     try
                     {
-                        while (true) globalStringText.Add(reader.ReadString(), reader.ReadString());
+                        while (true)
+                        {
+                            var key = reader.ReadString();
+                            globalStringText.Add(key, reader.ReadString());
+                        }
                     }
                     catch { }
                 }
