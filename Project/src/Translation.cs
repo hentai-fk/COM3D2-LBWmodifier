@@ -206,7 +206,7 @@ namespace LBWmodifier
                     continue;
 
                 if (original.StartsWith("$", StringComparison.CurrentCulture))
-                    globalStringRegex[new Regex(original.Substring(1), RegexOptions.Compiled)] = new KeyValuePair<string, string>(original.Substring(1), translation);
+                    globalStringRegex[new Regex(original.Substring(1), RegexOptions.Singleline | RegexOptions.Compiled)] = new KeyValuePair<string, string>(original.Substring(1), translation);
                 else
                     globalStringText[ConvertOriginalStringPattern(original)] = translation;
             }
