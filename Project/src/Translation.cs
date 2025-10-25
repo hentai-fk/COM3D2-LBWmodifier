@@ -46,6 +46,9 @@ namespace LBWmodifier
 
         public static void initialize()
         {
+            if (harmony_1 != null)
+                return;
+
             // 初始化资源替换路径
             Directory.CreateDirectory("LBWtranslation\\Script");
             Directory.CreateDirectory("LBWtranslation\\Texture");
@@ -94,6 +97,12 @@ namespace LBWmodifier
             harmony_1 = null;
             harmony_2 = null;
             MaidCafeTranslation.unload();
+
+            loadedStringText.Clear();
+            translatedStringText.Clear();
+            untranslatedStringText.Clear();
+            globalStringText.Clear();
+            globalStringRegex.Clear();
         }
 
         public static bool isInited() => harmony_1 != null && harmony_2 != null;
@@ -254,7 +263,6 @@ namespace LBWmodifier
             if (TranslateText(__result, out var translate) == RESULT.SUCCESS)
                 __result = translate;
         }
-
 
         public static void markTranslated(string text, bool translated)
         {

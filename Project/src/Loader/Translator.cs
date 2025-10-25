@@ -47,7 +47,7 @@ namespace LBWmodifier.Loader
         {
             base.Awake();
 
-            开启文字翻译 = Config.Bind<bool>("1. 场景", "开启文字翻译", true, new ConfigDescription("开启后可能会和其它翻译插件冲突，关闭后就不会冲突了但是游戏要重启", null, new ConfigurationManagerAttributes { Order = 30 }));
+            开启文字翻译 = Config.Bind<bool>("1. 场景", "开启文字翻译", true, new ConfigDescription("开启后可能会和其它翻译插件冲突", null, new ConfigurationManagerAttributes { Order = 30 }));
             开启字幕 = Config.Bind<bool>("1. 场景", "开启字幕", true, new ConfigDescription("文字会显示在屏幕顶部居中位置", null, new ConfigurationManagerAttributes { Order = 20 }));
             开启歌词 = Config.Bind<bool>("1. 场景", "开启歌词", true, new ConfigDescription("文字会显示在屏幕顶部居中位置", null, new ConfigurationManagerAttributes { Order = 10 }));
 
@@ -76,6 +76,13 @@ namespace LBWmodifier.Loader
             {
                 Translation.initialize();
             }
+            开启文字翻译.SettingChanged += (o, e) =>
+            {
+                if (开启文字翻译.Value)
+                    Translation.initialize();
+                else
+                    Translation.unload();
+            };
 
             harmony0 = Harmony.CreateAndPatchAll(typeof(AudioAndTextTrace));
 

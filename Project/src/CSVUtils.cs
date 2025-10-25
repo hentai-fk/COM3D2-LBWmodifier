@@ -136,7 +136,7 @@ namespace LBWmodifier
 
         public static void SaveArray2CSVFile(string file_name, string[][] array)
         {
-            using (var output = new StreamWriter(File.OpenWrite(file_name), Encoding.UTF8))
+            using (var output = new StreamWriter(File.Open(file_name, FileMode.Create), Encoding.UTF8))
             {
                 output.Write(TurnArray2CSVString(array));
             }
