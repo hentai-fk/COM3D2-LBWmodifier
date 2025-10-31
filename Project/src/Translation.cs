@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using I2.Loc;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -254,6 +255,14 @@ namespace LBWmodifier
         {
             if (TranslateText(text, out var translate) == RESULT.SUCCESS)
                 text = translate;
+        }
+
+        [HarmonyPatch(typeof(LanguageSource), nameof(LanguageSource.TryGetTranslation))]
+        [HarmonyPrefix]
+        private static void TryGetTranslation(ref string Term)
+        {
+            if (TranslateText(Term, out var translate) == RESULT.SUCCESS)
+                Term = translate;
         }
 
         [HarmonyPatch(typeof(SceneEdit.SMenuItem), nameof(SceneEdit.SMenuItem.CountryReplace))]
