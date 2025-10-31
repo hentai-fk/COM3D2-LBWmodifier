@@ -259,10 +259,10 @@ namespace LBWmodifier
 
         [HarmonyPatch(typeof(LanguageSource), nameof(LanguageSource.TryGetTranslation))]
         [HarmonyPrefix]
-        private static void TryGetTranslation(ref string Term)
+        private static void TryGetTranslation(ref string term)
         {
-            if (TranslateText(Term, out var translate) == RESULT.SUCCESS)
-                Term = translate;
+            if (TranslateText(term, out var translate) == RESULT.SUCCESS)
+                term = translate;
         }
 
         [HarmonyPatch(typeof(SceneEdit.SMenuItem), nameof(SceneEdit.SMenuItem.CountryReplace))]
