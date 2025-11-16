@@ -5,7 +5,6 @@
     <Platform>AnyCPU</Platform>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <OutputPath>..\Build\bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>..\Build\obj\$(Configuration)\</IntermediateOutputPath>
     <RootNamespace>LBWmodifier</RootNamespace>
     <AssemblyName>LBWmodifier-$(Configuration)</AssemblyName>
@@ -32,6 +31,10 @@
   </PropertyGroup>
   <PropertyGroup Condition=" $(Configuration.Contains('D2')) ">
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OutputPath>..\Build\bin\COM3D2\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" $(Configuration.Contains('D3')) ">
+    <OutputPath>..\Build\bin\COM3D2.5\</OutputPath>
   </PropertyGroup>
   <ItemGroup Condition=" $(Configuration.Contains('D2')) ">
     <Reference Include="Assembly-CSharp">
