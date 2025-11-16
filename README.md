@@ -31,4 +31,4 @@ COM3D2(CUSTOM ORDER MAID 3D2)游戏的扩展翻译插件
 
 ## 安装步骤
 
-COM3D2的所有版本和COM3D2.5版本3.39以前的版本下载`D3V.dll`后缀的文件，COM3D2.5版本3.40以后的版本下载`D4V.dll`后缀的文件，将下载的文件放到`BepInEx\plugins`目录即可
+COM3D2或者COM3D2.5下载对应的压缩包后，解压到`BepInEx\plugins`目录即可
