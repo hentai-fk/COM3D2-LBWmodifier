@@ -470,7 +470,7 @@ namespace LBWmodifier
 
             if (tex is Texture2D tex2d)
             {
-#if DATA4
+#if DATA2_5
                 __result = tex2d = duplicateTexture(tex2d);
                 ImageConversion.LoadImage(tex2d, newData);
                 switch (__instance)
@@ -506,7 +506,7 @@ namespace LBWmodifier
 
             if (tex is Texture2D tex2d)
             {
-#if DATA4
+#if DATA2_5
                 __result = tex2d = duplicateTexture(tex2d);
                 ImageConversion.LoadImage(tex2d, newData);
                 if (___mTexture != null)
@@ -534,7 +534,7 @@ namespace LBWmodifier
             if (newData == null)
                 return;
 
-#if DATA4
+#if DATA2_5
             ImageConversion.LoadImage(value.texture, newData);
 #else
             value.texture.LoadImage(new byte[0]);

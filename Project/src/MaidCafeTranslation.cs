@@ -1,9 +1,6 @@
 ﻿using HarmonyLib;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using static VRFaceShortcutConfig;
 
 namespace LBWmodifier
 {
@@ -11,7 +8,6 @@ namespace LBWmodifier
     {
         private static Harmony harmony0;
 
-#if DATA4
         public static void load()
         {
             var AddCommentData = AccessTools.Method("MaidCafe.MaidCafeStreamManager:AddCommentData");
@@ -39,9 +35,5 @@ namespace LBWmodifier
                     Traverse.Create(commentList[i]).Field("comment").SetValue(translation);
             }
         }
-#else
-        public static void load() { }
-        public static void unload() { }
-#endif
     }
 }

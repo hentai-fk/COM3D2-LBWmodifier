@@ -18,74 +18,78 @@
     <Prefer32Bit>false</Prefer32Bit>
     <ProjectGuid>{89692BB5-0754-4CFA-B58E-221A916E325D}</ProjectGuid>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Modifier D3V'">
-    <DefineConstants>MODIFIER DATA3</DefineConstants>
+  <PropertyGroup Condition="'$(Configuration)' == 'Modifier D2'">
+    <DefineConstants>MODIFIER DATA2</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Modifier D4V'">
-    <DefineConstants>MODIFIER DATA4</DefineConstants>
+  <PropertyGroup Condition="'$(Configuration)' == 'Modifier D3'">
+    <DefineConstants>MODIFIER DATA2_5</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Translator D3V'">
-    <DefineConstants>TRANSLATOR DATA3</DefineConstants>
+  <PropertyGroup Condition="'$(Configuration)' == 'Translator D2'">
+    <DefineConstants>TRANSLATOR DATA2</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Translator D4V'">
-    <DefineConstants>TRANSLATOR DATA4</DefineConstants>
+  <PropertyGroup Condition="'$(Configuration)' == 'Translator D3'">
+    <DefineConstants>TRANSLATOR DATA2_5</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" $(Configuration.Contains('D3V')) ">
+  <PropertyGroup Condition=" $(Configuration.Contains('D2')) ">
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
-  <ItemGroup Condition=" $(Configuration.Contains('D3V')) ">
+  <ItemGroup Condition=" $(Configuration.Contains('D2')) ">
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\Dependent DLL\COM3D2.5 D3V\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Libs\COM3D2\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\Dependent DLL\COM3D2.5 D3V\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\Libs\COM3D2\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\Dependent DLL\COM3D2.5 D3V\UnityEngine.dll</HintPath>
+      <HintPath>..\Libs\COM3D2\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\Dependent DLL\COM3D2.5 D3V\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\Libs\COM3D2\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup Condition=" $(Configuration.Contains('D4V')) ">
+  <ItemGroup Condition=" $(Configuration.Contains('D3')) ">
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\UnityEngine.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\UnityEngine.AudioModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\UnityEngine.ImageConversionModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\Dependent DLL\COM3D2.5 D4V\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>..\Libs\COM3D2.5\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\Libs\COM3D2.5\netstandard.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -97,11 +101,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="0Harmony">
-      <HintPath>..\Dependent DLL\BepInEx 5\core\0Harmony.dll</HintPath>
+      <HintPath>..\Libs\BepInEx5\core\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BepInEx">
-      <HintPath>..\Dependent DLL\BepInEx 5\core\BepInEx.dll</HintPath>
+      <HintPath>..\Libs\BepInEx5\core\BepInEx.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

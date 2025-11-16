@@ -10,7 +10,7 @@ using static LBWmodifier.SongLyrics;
 namespace LBWmodifier.Loader
 {
 #if TRANSLATOR
-    [BepInPlugin("lbwnb.translation", "LBWmodifier-Translator", "4.0")]
+    [BepInPlugin("lbwnb.translation", "LBWmodifier-Translator", "4.1")]
 #endif
     public class Translator : LBWmodifier
     {

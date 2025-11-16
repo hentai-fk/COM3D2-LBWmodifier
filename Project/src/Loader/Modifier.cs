@@ -20,7 +20,7 @@ using static ScenarioData;
 namespace LBWmodifier.Loader
 {
 #if MODIFIER
-    [BepInPlugin("lbwnb.modification", "LBWmodifier-Modifier", "4.0")]
+    [BepInPlugin("lbwnb.modification", "LBWmodifier-Modifier", "4.1")]
 #endif
     public class Modifier : LBWmodifier
     {
